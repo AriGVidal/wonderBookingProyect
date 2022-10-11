@@ -1,0 +1,43 @@
+{
+	"info": {
+		"_postman_id": "458f368a-eab5-41cf-be0e-7683839130df",
+		"name": "AgenciaInmobiliariaCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20572380"
+	},
+	"item": [
+		{
+			"name": "Listar Ciudades",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/ciudades/listarCiudades",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ciudades",
+						"listarCiudades"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

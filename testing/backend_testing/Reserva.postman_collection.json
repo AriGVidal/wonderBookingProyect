@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "e64bb600-71d5-4824-88f3-b93c4e7f3ef5",
+		"name": "Reserva",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "obtenerReservasPorProducto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/reserva/obtenerReservasPorProducto/19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reserva",
+						"obtenerReservasPorProducto",
+						"19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerReservasCheckInCheckOut",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "/api/producto/obtenerProductos?check_in=2022-07-14&check_out=2022-07-25",
+					"path": [
+						"api",
+						"producto",
+						"obtenerProductos"
+					],
+					"query": [
+						{
+							"key": "check_in",
+							"value": "2022-07-14"
+						},
+						{
+							"key": "check_out",
+							"value": "2022-07-25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crearReserva",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYXRhbGlhLmdpbmVyIiwiaWF0IjoxNjU2MDA4MzkzLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiZXhwIjoxNjU2MDExOTkzfQ.BEEb5zg-0LVo5asv42HT8qJLJbFzVqDX6fbZR7IQgUM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"productoId\":39,\"checkIn\":\"2022-12-12 22:22:22\",\"checkOut\":\"2022-12-03 23:22:22\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/reserva/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reserva",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerReservasPorUsuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}

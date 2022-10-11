@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "01ee2849-153a-483c-93ef-d68373ebce8d",
+		"name": "Usuario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14840709"
+	},
+	"item": [
+		{
+			"name": "Iniciar sesión",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"ctinoco@hotmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{backURL}}/api/auth/login",
+					"host": [
+						"{{backURL}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Camilo\",\r\n    \"apellido\": \"Tinoco\",\r\n    \"email\": \"ctinoco@hotmail.com\",\r\n    \"password\": \"123456\",\r\n    \"ciudad\": \"Colombia\",\r\n    \"rol\": {\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{backURL}}/api/usuario/crearUsuario",
+					"host": [
+						"{{backURL}}"
+					],
+					"path": [
+						"api",
+						"usuario",
+						"crearUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener usuario por Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZ2luZXJAaG90bWFpbC5jb20iLCJpYXQiOjE2NTU0OTQyNzUsImF1dGhvcml0aWVzIjpbeyJhdXRob3JpdHkiOiJST0xFX0FETUlOSVNUUkFET1IifV0sImV4cCI6MTY1NTQ5NTE3NX0.sJaEknHoE-OPbaczY2QM-m08AXcvUdGlHzzHFWbKXS4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{backURL}}/api/usuario/obtenerUsuarioPorId/2",
+					"host": [
+						"{{backURL}}"
+					],
+					"path": [
+						"api",
+						"usuario",
+						"obtenerUsuarioPorId",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener usuarios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjdGlub2NvQGhvdG1haWwuY29tIiwiaWF0IjoxNjU1NTA3MTA1LCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTklTVFJBRE9SIn1dLCJleHAiOjE2NTU1MDgwMDV9.LGGKvS9cbXuJQaxoLWUs0EDox1jCKm6gGmAi_wA9Y_s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{backURL}}/api/usuario/obtenerUsuarios",
+					"host": [
+						"{{backURL}}"
+					],
+					"path": [
+						"api",
+						"usuario",
+						"obtenerUsuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar usuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"nombre\": \"Andrés\",\r\n    \"apellido\": \"Tinoco\",\r\n    \"email\": \"kmilo1873@hotmail.com\",\r\n    \"password\": \"456\",\r\n    \"ciudad\": \"Villeta\",\r\n    \"rol\": {\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{backURL}}/api/usuario/actualizarUsuario",
+					"host": [
+						"{{backURL}}"
+					],
+					"path": [
+						"api",
+						"usuario",
+						"actualizarUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{backURL}}/api/usuario/eliminarUsuario/2",
+					"host": [
+						"{{backURL}}"
+					],
+					"path": [
+						"api",
+						"usuario",
+						"eliminarUsuario",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

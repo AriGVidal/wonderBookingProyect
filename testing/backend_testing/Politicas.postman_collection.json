@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "e6176da6-69bb-42c9-9115-25419254d1ba",
+		"name": "Politicas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "agruparPoliticas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/politica/obtenerPoliticasPorProducto/89",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"politica",
+						"obtenerPoliticasPorProducto",
+						"89"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "politicasSinAgrupar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}

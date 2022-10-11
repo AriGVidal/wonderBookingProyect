@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "776c5c65-4d65-446a-8158-95b8aa13153d",
+		"name": "Producto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14840709"
+	},
+	"item": [
+		{
+			"name": "productoPorId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"hotel\",\n    \"descripcion\": \"hotel1\",\n    \"idCiudad\": \"1\",\n    \"idCategoria\": \"1\",\n    \"politica\" : \"Pero mami no quiero ir a la escuela\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/producto/obtenerProductoPorId/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"producto",
+						"obtenerProductoPorId",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerProductos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/producto/obtenerProductos?check_in=2022-07-13&check_out=2022-07-26",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"producto",
+						"obtenerProductos"
+					],
+					"query": [
+						{
+							"key": "check_in",
+							"value": "2022-07-13"
+						},
+						{
+							"key": "check_out",
+							"value": "2022-07-26"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerProductosCategoria",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/producto/obtenerProductosCategoria/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"producto",
+						"obtenerProductosCategoria",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerProductosCiudad",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/producto/obtenerProductosCiudad/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"producto",
+						"obtenerProductosCiudad",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProductosCiudadCheckInCheckOut",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/producto/obtenerProductosCiudad/1?check_in=2023-02-01&check_out=2023-02-20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"producto",
+						"obtenerProductosCiudad",
+						"1"
+					],
+					"query": [
+						{
+							"key": "check_in",
+							"value": "2023-02-01"
+						},
+						{
+							"key": "check_out",
+							"value": "2023-02-20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"Casa\",\n    \"descripcion\": \"Casa en dubai\",\n    \"titulo\": \"bella casa\",\n    \"idCiudad\": 5,\n    \"ubicacion\": \"calle san miguel\",\n    \"idCategoria\": 6,\n    \"caracteristicas\": [\n        {\n            \"nombre\": \"EK\",\n            \"icono\": \"uniconito\"\n        }\n    ],\n    \"imagenes\": [\n        {\n            \"titulo\": \"fotito\",\n            \"url\": \"A\"\n        }\n    ],\n    \"politicas\": [\n        {\n            \"nombre\": \"politicaA\",\n            \"descripcion\": \"Soy una politica A\"\n        },\n        {\n            \"nombre\": \"politicaA\",\n            \"descripcion\": \"Soy otra politica A\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{backURL}}/api/producto/crear",
+					"host": [
+						"{{backURL}}"
+					],
+					"path": [
+						"api",
+						"producto",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar producto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 17,\r\n    \"nombre\": \"Casa\",\r\n    \"descripcion\": \"Casa en dubai\",\r\n    \"titulo\": \"bella casa\",\r\n    \"idCiudad\": 5,\r\n    \"ubicacion\": \"calle san miguel\",\r\n    \"idCategoria\": 6,\r\n    \"caracteristicas\": [\r\n        {\r\n            \"id\": 45,\r\n            \"nombre\": \"Gampling\",\r\n            \"icono\": \"Iglú\"\r\n        }\r\n    ],\r\n    \"imagenes\": [\r\n        {\r\n            \"id\": 51,\r\n            \"titulo\": \"Naturaleza\",\r\n            \"url\": \"https://miro.medium.com/max/1400/1*_bfBYAoHLR3WsLWhLenw0A.jpeg\"\r\n        }\r\n    ],\r\n    \"politicas\": [\r\n        {\r\n            \"id\": 52,\r\n            \"nombre\": \"Restricciones de edad\",\r\n            \"descripcion\": \"Solo se permiten personas mayores de 6 años\"\r\n        },\r\n        {\r\n            \"id\": 53,\r\n            \"nombre\": \"Politica de alimentos\",\r\n            \"descripcion\": \"Se prohibe el consumo de alcohol dentro de las instalaciones\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{backURL}}/api/producto/actualizarProducto",
+					"host": [
+						"{{backURL}}"
+					],
+					"path": [
+						"api",
+						"producto",
+						"actualizarProducto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar producto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/producto/eliminarProducto/23",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"producto",
+						"eliminarProducto",
+						"23"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
